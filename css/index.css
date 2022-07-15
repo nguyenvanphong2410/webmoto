@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    /* reset */
+    margin: 0;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.container_header {
+    background-color: black
+}
+
+.carousel-inner img {
+    height: 600px;
+    width: 100%;
+}
+
+.nav-item .nav-link {
+    color: rgb(23, 225, 33);
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: white;
+}
+
+header a:hover {
+    color: blue;
+}
+
+header {
+    border-bottom-right-radius: 80%;
+    border-bottom-left-radius: 80%;
+    /* z-index: giúp đè lên banner; */
+    z-index: 10;
+    /* con trỏ khi di chuột vào thanh menu */
+    cursor: pointer;
+    /*Cố định cho phần header khi scroll chuột */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    transform: translateX(13%);
+    height: 60px;
+    border-bottom: 1.5px solid rgb(134, 134, 134);
+    padding: 6px 0px;
+    transition: all 0.5s ease-in-out;
+    background-image: linear-gradient(rgb(114, 114, 114), rgb(0, 0, 0), rgb(114, 114, 114));
+}
+
+header.sticky {
+    height: 50px;
+    background-image: linear-gradient(rgb(92, 92, 92), rgb(255, 255, 255), rgb(92, 92, 92));
+    opacity: 0.9;
+    /*Độ mờ của Header khi scroll chuột*/
+    padding: 0px 0px;
+    /*Bóp lại 10px khi scroll chuột*/
+    box-shadow: 0px 5px 30px rgb(0, 0, 0, 0. 5);
+    /*Nổi lên khi scroll*/
+}
+
+header.sticky #main-menu a {
+    color: black;
+    /*Chữ màu đen khi scroll */
+    padding-left: 50px;
+}
+
+header #main-menu a:hover {
+    color: rgb(3, 154, 28);
+}
+
+header.sticky #main-menu a:hover {
+    color: rgb(5, 155, 30);
+}
+
+header.sticky #logo {
+    color: #000;
+    /*Chữ màu đen khi scroll */
+}
+
+#main-menu li {
+    position: relative;
+}
+
+#main-menu ul.sub-menu {
+    position: absolute;
+    background-image: linear-gradient(rgb(187, 187, 187), rgb(167, 167, 167), rgb(114, 114, 114));
+    padding: 15px 0px;
+    list-style: none;
+    width: 100px;
+    /* bo tròn */
+    border-radius: 5%;
+    display: none;
+}
+
+#main-menu ul.sub-menu a {
+    padding: 8px 15px;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(104, 104, 104);
+    border-left: 5px solid rgb(104, 104, 104);
+}
+
+#main-menu ul.sub-menu li:hover a {
+    border-bottom: 1px solid rgb(212, 212, 212);
+    border-left: 5px solid rgb(204, 204, 204);
+}
+
+
+/*BODY*/
+
+.container-body {
+    background-image: linear-gradient(0, rgba(83, 83, 83, 0.6), rgba(0, 0, 0, 0.8)), url("/img/phongcanh.jpg");
+    background-size: 100%;
+    width: 100%;
+    margin: 0px auto;
+}
+
+#imgbody1 {
+    width: 300px;
+    height: 300px;
+}
+
+div.row {
+    margin-left: 100px;
+    /* align-items: center; */
+}
+
+div.row div.col-md-4 {
+    width: 200px;
+    padding-left: 20px;
+}
+
+div.row div.col-md-4 a {
+    display: block;
+}
+
+div.row div.col-md-4 a img {
+    position: relative;
+    display: block;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 10px 5px rgba(151, 151, 151, 0.2);
+    border: 0.3px black;
+}
+
+div.row div.col-md-4 a .name-img {
+    position: absolute;
+    color: aqua;
+    font-weight: bold;
+    letter-spacing: 2px;
+    bottom: 10%;
+    background-color: blueviolet;
+    transform: translateX(120%);
+    z-index: 999;
+}
+
+div.row div.col-md-4 a:hover .name-img {
+    bottom: 50%;
+}
+
+div.row div.col-md-4 a:hover img {
+    transform: scale(1.1);
+}
+
+
+/* FOOTER */
+
+.container-footer {
+    background-color: rgb(53, 53, 53);
+    width: 100%;
+    height: 600px;
+    padding: 0px 0px;
+}
+
+.row {
+    padding: 50px 50px;
+}
+
+#h1-footer {
+    text-align: center;
+    animation: changeColorH1 ease 2s infinite;
+    text-transform: uppercase;
+}
+
+#h4-footer {
+    animation: changeColorH4 ease 0.3s infinite;
+}
+
+@keyframes changeColorH4 {
+    from {
+        color: rgb(255, 247, 0);
+    }
+    to {
+        color: rgb(255, 255, 255);
+    }
+}
+
+@keyframes changeColorH1 {
+    from {
+        color: rgb(24, 161, 6);
+    }
+    to {
+        color: rgb(255, 255, 255);
+    }
+}
+
+.row .col i {
+    color: rgb(172, 182, 182);
+    padding-left: 20px;
+}
